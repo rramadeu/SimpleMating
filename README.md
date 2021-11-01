@@ -2,6 +2,22 @@
 
 R package to make simple mating allocation for small breeding programs
 
+This package does culling of the possible parents based on relatedness and select the best mating based on a criterion given by the user. It follows the analysis pipeline:
+
+# Data preparation
+The user should have a list of genotypes they have available to mate. Each genotype should have a criterion (breeding/genetic value, selection/economic index) that should be maximized. Additionally, it should contain a relationship matrix between all the genotypes. Example of the input data is a data frame with two columns:
+
+```{r, eval=FALSE}
+print(criterion)
+       Genotype Criterion
+1 Genotype_0001  49.37977
+2 Genotype_0002  50.82541
+3 Genotype_0003  49.97405
+4 Genotype_0004  50.84229
+5 Genotype_0005  51.61311
+6 Genotype_0006  49.23767
+...
+```
 
 ## Contact
 Rodrigo R Amadeu  
@@ -12,7 +28,7 @@ https://rramadeu.github.io
 
 ## Installing and loading
 Within R:
-```{r, eval=FALSE}
+```
 install.packages("devtools")
 devtools::install_github("rramadeu/SimpleMating")
 
