@@ -61,7 +61,7 @@ devtools::install_github("rramadeu/SimpleMating")
 library(SimpleMating)
 
 ## Data example
-data("example_SimpleMating")
+data(example_SimpleMating)
 
 head(criterion)
 Kmat[1:5,1:5]
@@ -118,10 +118,11 @@ plan2[[1]] #statistics of the plan
 plan2[[2]] #mating plan
 
 ## If you want to update the K matrix to include the new crosses, there is a function in AGHmatrix
+devtools::install_github("rramadeu/AGHmatrix")
 library(AGHmatrix)
 packageVersion("AGHmatrix") #it should be >2.0.5
-newped = data.frame(Ind=paste0("23-",1:50),plan2[[2]][,1:2])
-newK = expandAmatrix(newped,A=Kmat,returnAll=FALSE)
+newped = data.frame(Ind=paste0("NEW-",1:50),plan2[[2]][,1:2])
+newK = expandAmatrix(newped,A=Kmat)
 ```
 
 # Comments and future directions
