@@ -116,6 +116,12 @@ plan2 = selectCrosses(data=allCrosses,
                       culling.pairwise.k = 0.0675)
 plan2[[1]] #statistics of the plan
 plan2[[2]] #mating plan
+
+## If you want to update the K matrix to include the new crosses, there is a function in AGHmatrix
+library(AGHmatrix)
+packageVersion("AGHmatrix") #it should be >2.0.5
+newped = data.frame(Ind=paste0("23-",1:50),plan2[[2]][,1:2])
+newK = expandAmatrix(newped,A=Kmat,returnAll=FALSE)
 ```
 
 # Comments and future directions
