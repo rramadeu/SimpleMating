@@ -123,6 +123,8 @@ library(AGHmatrix)
 packageVersion("AGHmatrix") #it should be >2.0.5
 newped = data.frame(Ind=paste0("NEW-",1:50),plan2[[2]][,1:2])
 newK = expandAmatrix(newped,A=Kmat)
+diag(newK)=NA
+mean(newK,na.rm=TRUE) #0.11
 ```
 
 # Comments and future directions
