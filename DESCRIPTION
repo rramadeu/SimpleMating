@@ -1,6 +1,6 @@
 Package: SimpleMating
 Title: Simple mating allocation for small breeding programs
-Version: 0.1.1001
+Version: 0.1.1002
 Author: Rodrigo Amadeu
 Maintainer: Rodrigo Amadeu <rramadeu@gmail.com>
 Description: Create breeding plans based on criteria to select for and relationship between individuals.
