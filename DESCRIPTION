@@ -4,7 +4,7 @@ Version: 0.1.1001
 Author: Rodrigo Amadeu
 Maintainer: Rodrigo Amadeu <rramadeu@gmail.com>
 Description: Create breeding plans based on criteria to select for and relationship between individuals.
-Depends: R (>= 4.0.0)
+Depends: R (>= 3.5.0)
 Imports:
     parallel,
     dplyr
