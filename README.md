@@ -30,7 +30,7 @@ Genotype_0005     0.5688419     0.5688419     0.5688419     0.5688419     1.0298
 ```
 
 # 1) Thinning by relatedness
-This step selects the top `n` individuals within a family clustered based on a relatednesses `threshold`. For example, if `n=2` and `threshold=0.50` the algorithm will identify all the group of individuals that shared has more than 0.50 in the relationship matrix and select the top 2 individuals with highest criterion to be used as possible parents in the mating plan
+This step selects the top `n` individuals within a family clustered based on a relatednesses `threshold`. For example, if `n=2` and `threshold=0.50` the algorithm will identify all the group of individuals that has more than 0.50 in the relationship matrix and will select the top two individuals with highest criterion to be used as possible parents in the mating plan.
 
 # 2) Building crosses
 Here, the use needs to define possible moms, dads, and genotypes to keep based on step 1. Then, the algorithm will return a data frame with all the possible crosses, the average of the criteria of each parent duo, and the relationship between the parents for each mating allocation.
@@ -39,7 +39,7 @@ Here, the use needs to define possible moms, dads, and genotypes to keep based o
 In this step the user can provide a historial pedigree of the breeding program, and then the algorithm will remove from the actual list crosses already made in the past.
 
 # 4) Select crosses
-Core algorithm, the user provides the number of crosses, the maximum number of crosses per parent, the minimum number of crosses per parent (expected), and a maximum value of relationship between parents that can be used to create a cross. The algorithm sort by criterion (maximum to minimum) and build a mating plan adding lines from top to bottom until the number of crosses is reached. During the process, it doesn't add crosses out of the range of the criteria. If a parent already reached its maximum, it is not add anymore in the plan.
+Core algorithm, the user provides the number of crosses, the maximum number of crosses per parent, the minimum number of crosses per parent (expected), and a maximum value of relationship between parents that can be used to create a cross. The algorithm first sorts by criterion (maximum to minimum) and then builds a mating plan adding lines from top to bottom until the number of crosses is reached. During the process, it doesn't add crosses out of the range of the criteria. If a parent already reached its maximum, it is not add anymore in the plan.
 
 ## Contact
 Rodrigo R Amadeu  
